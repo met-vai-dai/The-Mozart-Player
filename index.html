@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Mozart Player | Just a simple JavaScript music player</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="main-hero">
+        <h1>The Mozart Player</h1>
+        <div id="mozart-picture"></div>
+        <div id="hero-overlay"></div>
+    </div>
+
+    <div id="player">
+        <div id="player-controls">
+            <div id="time-control">
+                <span id="composition-current-time">00:00</span>
+                <input id="composition-time" type="range" value="0" min="0" step="0.01" />
+                <span id="composition-duration">00:00</span>
+            </div>
+
+            <div id="principal-controls">
+                <i id="play-composition" class="fas fa-play"></i>
+                <i id="pause-composition" class="fas fa-pause"></i>
+                <h3 id="composition-name">Select a composition</h3>
+                    
+                <div id="volume-controls">
+                    <i class="fas fa-volume-down"></i>
+                    <input id="composition-volume" type="range" min="0" max="1" step="0.01" />
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div> 
+        </div>
+        <audio id="composition-player">
+            <source id="composition-source" />
+                Mensaje de error?
+        </audio>
+    </div>
+
+    <div id="compositions-container">
+        <h2>Some Mozart compositions</h2>
+        <div id="compositions-list"></div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/62c45373fd.js" crossorigin="anonymous"></script>
+</body>
+</html>

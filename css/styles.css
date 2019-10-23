@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background: rgb(14, 14, 14);
+}
+
+/* MAIN HERO */
+#main-hero {
+    position: relative;
+    background: url("../images/hero-background.jpg") #a18a7a no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1.2em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 0px 0px 40px 40px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, .4);
+    text-align: center;
+}
+
+#main-hero h1 {
+    z-index: 1;
+    color: rgb(255, 208, 0);
+    font-size: 6em;
+}
+
+#main-hero #mozart-picture {
+    background: url("../images/Mozart-picture.png") #a18a7a no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, .6);
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+}
+
+#main-hero #hero-overlay {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .2), rgba(0, 0, 0, .8));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* COMPOSITIONS PLAYER */
+#player, #compositions-container {
+    margin: 40px;
+    padding: 1.2em;
+    border-radius: 20px;
+    background: white;
+}
+
+#player #player-controls {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#player #player-controls #time-control {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+#player #player-controls i.fa-play, i.fa-pause {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#player #player-controls i.fa-play {
+    border-right: 4px solid black;
+}
+
+#player #player-controls #composition-name {
+    display: inline;
+}
+
+#player #player-controls #volume-controls {
+    background: rgb(255, 208, 0);
+    padding: .4em .8em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* COMPOSITIONS CONTAINER */
+#compositions-container {
+    border: 6px solid rgb(255, 208, 0);
+}
+
+#compositions-container #compositions-list {
+    max-height: 20vh;
+    overflow: auto;
+}
+
+#compositions-list li{
+    padding: 1.2em ;
+    border-bottom: 1px solid black;
+}
+
+#compositions-list li:hover {
+    cursor: pointer;
+}
