@@ -34,7 +34,10 @@ compositionsList.onclick = (e) => {
     
     audioSource.src = 'songs/' + compositionName + '.mp3';
     audioPlayer.load();
+	// display #preparing-composition text
 	preparingComposition.innerText = "Preparing composition...";
+	preparingComposition.style.display = "block";
+	
     document.getElementById('composition-name').innerText = compositionName;
     audioPlayer.play();
 }
