@@ -109,5 +109,5 @@ audioPlayer.onprogress = e => {
 
 audioPlayer.oncanplay = e => {
 	// Hide #preparing-composition
-	preparingComposition.innerText = "";
+	preparingComposition.style.display = "none";
 }
