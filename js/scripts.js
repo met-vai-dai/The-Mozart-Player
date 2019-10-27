@@ -72,6 +72,9 @@ audioPlayer.ontimeupdate = (e) => {
         compositionCurrentTime.innerText = formatSecondsAsTime(audioPlayer.currentTime);
         compositionTime.value = (audioPlayer.currentTime / 60).toFixed(2);
         compositionTime.max = (audioPlayer.duration / 60).toFixed(2);
+		
+		// Hide #preparing-composition
+		preparingComposition.innerText = "";
     }
 }
 
@@ -93,4 +96,16 @@ function formatSecondsAsTime(secs) {
 
 compositionTime.onchange = (e) => {
     audioPlayer.currentTime = e.target.value * 60;
+}
+
+/* PREPARING COMPOSITION TEXT */
+const preparingComposition = document.getElementById('preparing-composition');
+
+audioPlayer.onprogress = e => {
+	preparingComposition.innerText = "Preparing composition...";
+	/*for(let i = 0; i < 100; i++) {
+		preparingComposition.style.opacity = 0;
+	}
+	preparingComposition.style.color = "#868686";
+	preparingComposition.style.color = "#e4e4e4";*/
 }

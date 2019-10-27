@@ -18,6 +18,16 @@ body {
     text-align: center;
 }
 
+#main-hero #preparing-composition {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #e4e4e4;
+	/*transition: 10s opacity;*/
+	z-index: 1;
+}
+
 #main-hero h1 {
     z-index: 1;
     color: rgb(255, 208, 0);
