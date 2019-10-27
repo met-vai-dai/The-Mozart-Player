@@ -71,10 +71,7 @@ audioPlayer.ontimeupdate = (e) => {
         compositionDuration.innerText = formatSecondsAsTime(audioPlayer.duration);
         compositionCurrentTime.innerText = formatSecondsAsTime(audioPlayer.currentTime);
         compositionTime.value = (audioPlayer.currentTime / 60).toFixed(2);
-        compositionTime.max = (audioPlayer.duration / 60).toFixed(2);
-		
-		// Hide #preparing-composition
-		preparingComposition.innerText = "";
+		compositionTime.max = (audioPlayer.duration / 60).toFixed(2);
     }
 }
 
@@ -108,4 +105,9 @@ audioPlayer.onprogress = e => {
 	}
 	preparingComposition.style.color = "#868686";
 	preparingComposition.style.color = "#e4e4e4";*/
+}
+
+audioPlayer.oncanplay = e => {
+	// Hide #preparing-composition
+	preparingComposition.innerText = "";
 }
