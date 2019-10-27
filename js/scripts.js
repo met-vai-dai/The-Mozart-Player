@@ -34,6 +34,7 @@ compositionsList.onclick = (e) => {
     
     audioSource.src = 'songs/' + compositionName + '.mp3';
     audioPlayer.load();
+	preparingComposition.innerText = "Preparing composition...";
     document.getElementById('composition-name').innerText = compositionName;
     audioPlayer.play();
 }
@@ -97,15 +98,6 @@ compositionTime.onchange = (e) => {
 
 /* PREPARING COMPOSITION TEXT */
 const preparingComposition = document.getElementById('preparing-composition');
-
-audioPlayer.onprogress = e => {
-	preparingComposition.innerText = "Preparing composition...";
-	/*for(let i = 0; i < 100; i++) {
-		preparingComposition.style.opacity = 0;
-	}
-	preparingComposition.style.color = "#868686";
-	preparingComposition.style.color = "#e4e4e4";*/
-}
 
 audioPlayer.oncanplaythrough = e => {
 	// Hide #preparing-composition
