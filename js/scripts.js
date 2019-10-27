@@ -107,7 +107,7 @@ audioPlayer.onprogress = e => {
 	preparingComposition.style.color = "#e4e4e4";*/
 }
 
-audioPlayer.oncanplay = e => {
+audioPlayer.oncanplaythrough = e => {
 	// Hide #preparing-composition
 	preparingComposition.style.display = "none";
 }
